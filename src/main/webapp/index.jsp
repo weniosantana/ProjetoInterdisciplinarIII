@@ -30,7 +30,6 @@
 	  background-color: #354270;
 	  color: white;
 	  display: inline-block;
-	  
 	}
 	h1{
 	display:inline-block;
@@ -39,17 +38,14 @@
 	display:inline-block;
 	}
 	op{
-	
 	display:inline-block;
 	float:right;
 	}
 	body{
 		margin: 0;
 		 background-image: url("fundote.jpg ");
-		 background-repeat: repeat;
-		 
+		 background-repeat: repeat; 
 	}
-	
 </style>
 </head>
 <body>
@@ -64,6 +60,5 @@
 	</form>
 	</div>
 	</div>
-
 </body>
 </html>

@@ -14,12 +14,10 @@
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-	
 	.textarea{
 			border-radius: 0.4rem;
-		   position: relative; /* Helps to keep label top on input */
-		 
-		  	background-color: #fcffff; /* Match the background */
+		    position: relative;
+		  	background-color: #fcffff;
 		  	border: black 0.1rem solid;
 		  	width: 20rem;
 		  	height: 2rem;
@@ -27,7 +25,6 @@
 		  	font-size: 1.4rem;
 			margin-top:5px;
 			margin-bottom:5px;	 	  
-	
 	}
 	.btn{
 	  height: 2rem;
@@ -54,8 +51,7 @@
 	body{
 		margin: 0;
 		 background-image: url("fundote.jpg ");
-		 background-repeat: repeat;
-		 
+		 background-repeat: repeat; 
 	}
 </style>
 </head>
@@ -65,13 +61,11 @@
 		<label>Codigo do item:</label><br>
 		<input class="textarea" type="text" name="coditemMos"><br>
 		<input class="btn" type="submit" value="MOSTRAR">		
-		
 	</form>
 	<br>
 	<form action='index.jsp'>	
 	<input class='btn' type='submit' value='VOLTAR'> 
 	</form>
-	
 	</div>
 </body>
 </html>

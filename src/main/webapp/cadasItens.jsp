@@ -23,7 +23,6 @@
 	  background-color: #b5915c;
 	  color: black;
 	}
-
 	.textarea{
 		border-radius: 0.4rem;
 	    position: relative;
@@ -35,11 +34,8 @@
 	  	font-size: 1.4rem;
 		margin-top:5px;
 		margin-bottom:5px;	 	  
-	
 	}
 	label{
-		
-	
 	}
 	.btn{
 	  height: 2rem;
@@ -49,9 +45,7 @@
 	  background-color: #354270;
 	  color: white;
 	  display: inline-block;
-	  
 	}
-	
 	body{
 		margin: 0;
 		 background-image: url("fundote.jpg ");
@@ -73,11 +67,9 @@
 		<input  class="textarea"  type="text" name="valoritem"><br>
 		<input class="btn" type="submit" value="CADASTRAR">
 	</form>
-	
 	<form action='index.jsp'>	
 	<input class='btn' type='submit' value='VOLTAR'> 
 	</form>
-	
 	</div>
 </body>
 </html>

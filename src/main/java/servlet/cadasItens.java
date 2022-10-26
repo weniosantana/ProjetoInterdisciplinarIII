@@ -7,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,10 +27,7 @@ public class cadasItens extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		Connection conn = null;
-		Statement st1 = null;
-		PreparedStatement st = null;
-		ResultSet rs = null;
-		
+		PreparedStatement st = null;		
 		try {
 			int coditem = Integer.parseInt(request.getParameter("coditem"));
 			String nomitem =request.getParameter("nomitem");
@@ -39,7 +35,6 @@ public class cadasItens extends HttpServlet {
 			float valoritem = Float.parseFloat(request.getParameter("valoritem"));
 			
 			conn = DB.getConnection();
-			
 			st = conn.prepareStatement(
 					"Insert into tbitens (coditem, nomitem, marcitem, valoritem) values (?,?,?,?)"
 					);
@@ -47,9 +42,8 @@ public class cadasItens extends HttpServlet {
 			st.setString(2, nomitem);
 			st.setString(3, marcitem);
 			st.setFloat(4, valoritem);
-			
 			st.executeUpdate();
-						
+			
 		}catch(SQLException e){
 			e.printStackTrace();
 			
@@ -58,7 +52,6 @@ public class cadasItens extends HttpServlet {
 		}finally {
 			
 		};
-	
 	
 		PrintWriter out = response.getWriter();
 	    response.setContentType("text/html");
@@ -77,7 +70,6 @@ public class cadasItens extends HttpServlet {
 	    out.println("}");
 	    out.println("input{margin-bottom:20px;}");
 	    out.println(".btn{height: 2rem; font-size: 1.1rem; border-radius: 5px; border: none; margin-top: 3px; background-color: #354270; color: white; display: inline-block;}");
-
 	    out.println("</style>");
 	    out.println("</head>");
 	    out.println("<body>");
@@ -87,8 +79,7 @@ public class cadasItens extends HttpServlet {
 	    out.println("</div>");
 	    out.println("</body>");
 	    out.println("</html>");	
-
-
+	    
 	}
 
 }
