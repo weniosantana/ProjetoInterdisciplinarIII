@@ -2,7 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import servlet.consultItens;
+import servlet.consultQuarto;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +19,7 @@ public class downloadJson extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int i;
-		consultItens ms = new consultItens();
+		consultQuarto ms = new consultQuarto();
 		PrintWriter out = response.getWriter();
 	    response.setContentType("text/html");
 	    String filename = ms.gerarJSON(); 

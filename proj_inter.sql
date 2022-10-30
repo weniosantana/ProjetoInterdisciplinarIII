@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `proj_inter` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `proj_inter`;
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
 -- Host: localhost    Database: proj_inter
@@ -16,29 +18,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbitens`
+-- Table structure for table `tbquartos`
 --
 
-DROP TABLE IF EXISTS `tbitens`;
+DROP TABLE IF EXISTS `tbquartos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tbitens` (
-  `coditem` int NOT NULL,
-  `nomitem` varchar(255) DEFAULT NULL,
-  `marcitem` varchar(150) DEFAULT NULL,
-  `valoritem` float DEFAULT NULL,
-  PRIMARY KEY (`coditem`)
+CREATE TABLE `tbquartos` (
+  `nquarto` int NOT NULL,
+  `nomequarto` varchar(255) DEFAULT NULL,
+  `tipoquarto` varchar(150) DEFAULT NULL,
+  `valorquarto` float DEFAULT NULL,
+  PRIMARY KEY (`nquarto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbitens`
+-- Dumping data for table `tbquartos`
 --
 
-LOCK TABLES `tbitens` WRITE;
-/*!40000 ALTER TABLE `tbitens` DISABLE KEYS */;
-INSERT INTO `tbitens` VALUES (1,'Teclado','Lenovo',20),(2,'Mouse','Lenovo',10),(3,'Monitor','Dell',40),(4,'VOIP','Digitro',25);
-/*!40000 ALTER TABLE `tbitens` ENABLE KEYS */;
+LOCK TABLES `tbquartos` WRITE;
+/*!40000 ALTER TABLE `tbquartos` DISABLE KEYS */;
+INSERT INTO `tbquartos` VALUES (1,'Quarto Solteiro Plus','Solteiro',90),(2,'Quarto Casal King','Casal',180),(3,'Quarto Estudante','Solteiro',45),(4,'Quarto Solteiro Simples','Solteiro',60);
+/*!40000 ALTER TABLE `tbquartos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -81,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-25 15:23:36
+-- Dump completed on 2022-10-30 13:07:39

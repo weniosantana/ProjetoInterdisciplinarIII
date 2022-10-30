@@ -1,25 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    
-<%@ page import= "java.sql.Connection"%>
-<%@page import=  "java.sql.ResultSet" %>
-<%@page import= "java.sql.SQLException" %>
-<%@page import= "java.sql.Statement" %>
-<%@page import= "db.DB" %>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>INICIO</title>
+<title>CONSULTAR ITENS</title>
 <style>
-	.main{
+.main{
 		margin: 0 auto;
 		text-align: center;
 		background-color: #fed73f;
 		border-radius: 0px 0px 20px 20px;
 		padding-top: 10px;
 		padding-bottom: 10px;
+	}
+	.textarea{
+			border-radius: 0.4rem;
+		    position: relative;
+		  	background-color: #fcffff;
+		  	border: black 0.1rem solid;
+		  	width: 20rem;
+		  	height: 2rem;
+		  	padding: 0rem 1rem;
+		  	font-size: 1.4rem;
+			margin-top:5px;
+			margin-bottom:5px;	 	  
 	}
 	.btn{
 	  height: 2rem;
@@ -30,6 +35,7 @@
 	  background-color: #354270;
 	  color: white;
 	  display: inline-block;
+	  
 	}
 	h1{
 	display:inline-block;
@@ -38,6 +44,7 @@
 	display:inline-block;
 	}
 	op{
+	
 	display:inline-block;
 	float:right;
 	}
@@ -50,15 +57,15 @@
 </head>
 <body>
 	<div class="main">
-	<h1>Projeto Interdisciplinar III</h1>
-	<div class="op">
-	<form ACTION="cadasQuarto.jsp">
-  	<input class="btn" type="submit" value="CADASTRO DE ITENS">
+	<form action="/ProjetoWeb/consultQuarto">
+		<label>Numero do Quarto:</label><br>
+		<input class="textarea" type="text" name="nquartoMos"><br>
+		<input class="btn" type="submit" value="MOSTRAR">		
 	</form>
-	<form ACTION="consultQuarto.jsp">
-  	<input class="btn" type="submit" value="CONSULTAR E GERAR (JSON/XML) OS ITENS">
+	<br>
+	<form action='index.jsp'>	
+	<input class='btn' type='submit' value='VOLTAR'> 
 	</form>
-	</div>
 	</div>
 </body>
 </html>
